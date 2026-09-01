@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-ink-900 text-slate-100 antialiased;
+    background-image: radial-gradient(circle at 15% -10%, rgba(56, 89, 168, 0.22), transparent 55%),
+      radial-gradient(circle at 85% 0%, rgba(108, 190, 69, 0.12), transparent 45%);
+    background-attachment: fixed;
+  }
+
+  /* Tabular figures keep countdown digits from jittering as they tick down. */
+  .tnum {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-white/10 bg-ink-800/70 shadow-lg shadow-black/30 backdrop-blur;
+  }
+}
